@@ -29,7 +29,8 @@ centered_a.mean() #check to see if the new mean is 0
 a_mean = a.mean()
 a_std = a.std()
 
-a_zscores = [(value- a_mean) / a_std for value in a]
+#a_zscores = [(value- a_mean) / a_std for value in a]
+a_zscores = centered_a / a.std
 
 # Life w/o numpy to life with numpy
 
@@ -39,7 +40,7 @@ a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Use python's built in functionality/operators to determine the following:
 # Exercise 1 - Make a variable called sum_of_a to hold the sum of all the numbers in above list
 sum_of_a = sum(a)
-sum_of_a  55
+sum_of_a  #55
 
 # Exercise 2 - Make a variable named min_of_a to hold the minimum of all the numbers in the above list
 min_of_a = min(a)
@@ -198,7 +199,7 @@ c.prod() # 362880
 c.std() # 2.581988897471611
 
 # Exercise 3 - Determine the variance of c.
-c.var() # .666666666666667
+c.var() # 6.666666666666667
 
 # Exercise 4 - Print out the shape of the array c
 c.shape # (3, 3)
